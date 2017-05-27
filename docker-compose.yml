@@ -1,0 +1,10 @@
+version: "2"
+
+services: 
+  php7-apache2:
+    build: .
+    container_name: php7-apache2
+    ports:
+      - '8002:80'
+    volumes: 
+      - $PWD/htdocs:/var/www/html

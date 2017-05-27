@@ -11,3 +11,5 @@ This is a docker project to create a container with PHP7, Xdebug and Apache2.
     A sample employee list page is displayed.
 
 See Dockerfile and docker-compose.yml for configuration details.
+
+See my blog post http://ramkulkarni.com/blog/setting-up-and-debugging-php7-in-docker/ and video https://youtu.be/htAk4Z6dIiA for more information.

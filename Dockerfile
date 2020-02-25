@@ -1,4 +1,4 @@
-FROM php:7.3.6-apache-stretch
+FROM php:7.4-apache
 
 RUN apt-get update
 RUN apt-get install -y apt-utils vim curl sqlite3

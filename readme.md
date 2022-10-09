@@ -2,7 +2,7 @@
 
 This is a docker project to create a container with PHP7, Xdebug and Apache2. 
 
-* docker-compose up
+* docker-compose up -d
 
     Starts the container named php7-apache2
 

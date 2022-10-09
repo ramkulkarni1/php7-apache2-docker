@@ -1,0 +1,30 @@
+version: "3.7"
+
+services: 
+  php7-apache2:
+    build: .
+    container_name: php7-apache2
+    ports:
+      - '80:80'
+    volumes: 
+      - ../src:/var/www/html
+      
+  mysql-db:
+    image: mariadb 
+    container_name: mysql-db
+    volumes:
+        - score_dbdata:/var/lib/mysql
+    hostname: score_db
+    expose:
+        - "3306"
+    environment:
+        MYSQL_USER: "db_admin"
+        MYSQL_PASSWORD: "devmysql"
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+        VIRTUAL_HOST: mysql.local
+        VIRTUAL_PORT: 3306
+    command: mysqld --sql_mode=""
+    ports:
+        - "31003:3306"
+volumes:
+  score_dbdata:
